@@ -1,0 +1,15 @@
+---
+import Project from "./Project.astro";
+
+const projects = [
+  { name: 'Project One', description: 'Description for project one', link: '#' },
+  { name: 'Project Two', description: 'Description for project two', link: '#' },
+  { name: 'Project Three', description: 'Description for project three', link: '#' },
+];
+---
+
+<section class="flex flex-col gap-4 pb-14">
+  {projects.map(project => (
+    <Project project={project} />
+  ))}
+</section>

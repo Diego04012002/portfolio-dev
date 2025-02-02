@@ -1,8 +1,6 @@
 ---
-import Bagde from "../components/Bagde.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GitHub from "../icons/GitHub.astro";
-import LinkedIn from "../icons/LinkedIn.astro";
+import AboutMe from "../components/AboutMe.astro";
+import ListProjects from "../components/ListProject.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -11,42 +9,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
-      <img
-        class="rounded-full w-13 h-13 mb-5"
-        src="/src/assets/images/perfil.jpg"
-        alt=""
-      />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hey soy Diego
-        <div class="flex justify-center items-center">
-          <a
-            href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
-            target="_blank"
-            rel="noopener"
-            class="flex flex-row gap-x-2 justify-center items-center"
-          >
-            <Bagde>Disponible para trabajar</Bagde>
-          </a>
-        </div>
-      </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
-        <span class="text-violet-700"
-          >👨‍💻 +3 años de experiencia Desarrollador Frontend y Backend.</span
-        >
-        De Tenerife, España 🇪🇸. Especializado en buscar soluciones a problemas
-        <span class="text-fuchsia-700"> originales, complejas y unicas. </span>
-      </h2>
-      <nav class="flex flex-row gap-x-4 mt-9">
-        <SocialPill href="https://github.com/Diego04012002">
-          <GitHub class="w-6 h-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/">
-          <LinkedIn class="w-6 h-6" />
-          LinkedIn
-        </SocialPill>
-      </nav>
-    </section>
+    <AboutMe />
+    <ListProjects />
   </main>
 </Layout>
