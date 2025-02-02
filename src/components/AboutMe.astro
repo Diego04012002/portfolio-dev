@@ -1,15 +1,17 @@
 ---
+import { Image } from "astro:assets";
 import GitHub from "../icons/GitHub.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import Bagde from "./Bagde.astro";
 import SocialPill from "./SocialPill.astro";
+import perfil from "/src/assets/perfil.jpg";
 ---
 
 <section class="w-full lg:w-[740px] mx-auto py-44">
-  <img
-    class="rounded-full w-13 h-13 mb-5"
-    src="/src/assets/perfil.jpg"
-    alt=""
+  <Image
+    src={perfil}
+    alt="Diego Alejandro Garcia Deus"
+    class="rounded-full w-20 h-20"
   />
   <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
     Hey soy Diego
@@ -36,7 +38,9 @@ import SocialPill from "./SocialPill.astro";
       <GitHub class="w-6 h-6" />
       GitHub
     </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/">
+    <SocialPill
+      href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
+    >
       <LinkedIn class="w-6 h-6" />
       LinkedIn
     </SocialPill>
