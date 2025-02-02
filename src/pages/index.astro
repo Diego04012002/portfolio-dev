@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Bagde from "../components/Bagde.astro";
+import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <main>
+    <section class="w-full lg:w-[740px]">
+      <h1>
+        Hey soy Diego <Bagde>Disponible para trabajar</Bagde>
+      </h1>
+      <h2>
+        +3 años de experiencia. Desarrollador Frontend y Backend. De Tenerife,
+        España. Especializado en buscar soluciones a problemas originales,
+        complejas y unicas.
+      </h2>
+    </section>
+  </main>
 </Layout>
