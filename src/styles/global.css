@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+body.light .bg-main div {
+  background: radial-gradient(
+    125% 125% at 50% 10%,
+    #fff 40%,
+    #a3c 100%
+  ) !important;
+}
+
+body.light .text-normal-light,
+body.light .text-principal-about,
+body.light .title-projects,
+body.light .title-project,
+body.light .description-project,
+body.light .nav-list {
+  color: black !important;
+}
+
+body.light .icons,
+body.light .links-project {
+  color: black;
+  border-color: black;
+  fill: black;
+}
+
+body.light .header {
+  background-color: color-mix(in oklab, white 80%, transparent);
+}
+
+body.light .animation-ball::before {
+  background-color: black;
+}

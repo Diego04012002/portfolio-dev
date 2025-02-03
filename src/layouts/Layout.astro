@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 import "../styles/global.css";
 import "@fontsource-variable/onest";
 ---
@@ -14,21 +15,27 @@ import "@fontsource-variable/onest";
     <title>Diego Alejandro Garcia Deus</title>
   </head>
   <body>
-		<div class="fixed left-0 top-0 -z-10 h-full w-full"><div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div></div>
-		<Header />
-		<slot />
+    <div class="bg-main fixed left-0 top-0 -z-10 h-full w-full">
+      <div
+        class="bg-style absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
+      >
+      </div>
+    </div>
+    <Header />
+    <ThemeToggle />
+    <slot />
   </body>
 </html>
 
 <style>
   :root {
-    color-scheme: light dark;
+    color-scheme: dark light;
   }
   html {
     font-family: "Onest Variable", sans-serif;
+    scroll-behavior: smooth;
   }
   body {
-    background-color: #050505;
     display: flex;
     flex-direction: column;
     align-items: center;

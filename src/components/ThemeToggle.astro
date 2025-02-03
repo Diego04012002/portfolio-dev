@@ -1,0 +1,56 @@
+
+
+<div
+  class="fixed z-20 flex items-center p-3 transition duration-300 bg-gray-200 rounded-lg shadow-md cursor-pointer dark:bg-gray-800 bottom-6 right-6 __theme-toggle"
+>
+  <label for="theme" class="flex items-center tap-highlight-none">
+    <span class="relative flex items-center">
+      <input
+        id="theme"
+        class="w-12 h-6 transition-colors duration-300 rounded-full shadow-inner outline-none appearance-none bg-gray-900"
+        type="checkbox"
+        role="switch"
+        name="theme"
+        value="dark"
+        onclick="toggleTheme(event)"
+      />
+      <span
+        id="toggle"
+        class="absolute transition-transform duration-300 -translate-y-1/2 rounded-full size-5 top-1/2 left-1 bg-blue-700 translate-x-0"
+      ></span>
+    </span>
+  </label>
+</div>
+
+<script is:inline>
+  const body = document.body;
+  function toggleTheme(event) {
+    const isChecked = localStorage.getItem('theme') === 'light';
+    const toggle = event.target.nextElementSibling;
+    if (isChecked) {
+      toggle.classList.add('translate-x-0', 'bg-blue-700');
+      toggle.classList.remove('translate-x-full', 'bg-yellow-500');
+      body.classList.remove('light');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      toggle.classList.add('translate-x-full', 'bg-yellow-500');
+      toggle.classList.remove('translate-x-0', 'bg-blue-700');
+      body.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+  loadTheme = () => {
+    const toggle = document.getElementById('toggle');
+    const currentTheme = localStorage.getItem('theme');
+    console.log(currentTheme);
+    if (currentTheme === 'light') {
+      toggle.classList.add('translate-x-full', 'bg-yellow-500');
+      toggle.classList.remove('translate-x-0', 'bg-blue-700');
+      body.classList.add('light');
+    } else {
+      toggle.classList.add('translate-x-0', 'bg-blue-700');
+      toggle.classList.remove('translate-x-full', 'bg-yellow-500');
+      body.classList.add('dark');}
+  };
+  loadTheme();
+</script>
