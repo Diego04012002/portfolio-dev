@@ -1,0 +1,32 @@
+---
+import WorkExperience from "../icons/WorkExperience.astro";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    title: "Frontend Developer",
+    company: "Dstech",
+    date: "2023 - Actualidad",
+    description:
+      "Llevamos desde 2013 combinando creatividad y tecnología para dar forma a experiencias sólidas en un mundo que cambia de forma cada día.",
+    link: "https://www.dstech.it",
+  }
+];
+---
+
+
+<section
+  id="experience"
+  class="w-full lg:w-[740px] mx-auto flex flex-col justify-center mb-40"
+>
+  <h2 class="text-2xl font-semibold mb-5 opacity-50 flex items-center gap-x-5 dark:text-gray-900"> <WorkExperience class="size-8"/>Experiencia laboral</h2>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+      EXPERIENCE.map((experience) => (
+        <li class="mb-10 ms-4">
+          <ExperienceItem {...experience} />
+        </li>
+      ))
+    }
+  </ol>
+</section>

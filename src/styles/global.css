@@ -1,43 +1,17 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-body.light .bg-main div {
-  background: radial-gradient(
-    125% 125% at 50% 10%,
-    #fff 40%,
-    #a3c 100%
-  ) !important;
-  transition: background 0.5s ease;
-}
 
-body.light .text-normal-light,
-body.light .text-principal-about,
-body.light .title-projects,
-body.light .title-project,
-body.light .description-project,
-body.light .nav-list {
-  color: black !important;
-  transition: color 0.5s ease;
-}
+@theme {
 
-body.light .icons,
-body.light .links-project {
-  color: black;
-  border-color: black;
-  fill: black;
-  background-color: color-mix(in oklab, black 5%, transparent);
-  transition: color 0.5s ease, border-color 0.5s ease,
-  fill 0.5s ease scale 0.5s ease;
-}
+  --animate-carousel-infinite: infinite 25s linear infinite;
 
-body.light .links-project:hover {
-  scale: 1.2;
-}
-
-body.light .header {
-  background-color: color-mix(in oklab, white 80%, transparent);
-}
-
-body.light .animation-ball::before {
-  background-color: black;
-  transition: background-color 0.5s ease;
+  @keyframes infinite {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }

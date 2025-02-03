@@ -1,4 +1,6 @@
 ---
+import type { ACTION_ERROR_CODES } from "astro:actions";
+import Web from "../icons/Web.astro";
 import Project from "./Project.astro";
 
 const projects = [
@@ -6,30 +8,41 @@ const projects = [
     name: "Project One",
     description: "Descripcipon de un proyecto largo que se ha realizado en el pasado",
     link: "https://google.com",
-    image:"https://datascientest.com/wp-content/uploads/2022/05/ide-data-vizualisation-1-1024x539.jpg"
+    image:"https://flowbite.com/docs/images/blog/image-4.jpg",
+    languages:[
+      "Angular",
+      "SpringBoot"
+    ]
   },
   {
     name: "Project Two",
     description: "Descripcipon de un proyecto largo que se ha realizado en el pasado",
     link: "#",
-    image:"https://datascientest.com/wp-content/uploads/2022/05/ide-data-vizualisation-1-1024x539.jpg"
+    image:"https://flowbite.com/docs/images/blog/image-4.jpg",
+    languages:[
+      "Angular",
+      "SpringBoot"
+    ]
   },
   {
     name: "Project Three",
     description: "Descripcipon de un proyecto largo que se ha realizado en el pasado",
     link: "#",
-    image:"https://datascientest.com/wp-content/uploads/2022/05/ide-data-vizualisation-1-1024x539.jpg"
+    image:"https://flowbite.com/docs/images/blog/image-4.jpg",
+    languages:[
+      "Angular",
+      "SpringBoot"
+    ]
   },
 ];
 ---
 
 <section class="w-full lg:w-[740px] flex flex-col gap-4 mb-70 mt-20 " id="projects">
-  <h1 class="title-projects text-4xl font-bold text-white text-center mb-6 transition duration-300">
-    Mis proyectos principales
-  </h1>
-  <Project project={projects[0]} />
-  <Project project={projects[2]} />
-  <Project project={projects[0]} />
-  <Project project={projects[1]} />
-  <Project project={projects[2]} />
+  <h2 class="text-2xl font-semibold mb-5 opacity-50 flex items-center gap-x-5 dark:text-gray-900"> <Web class="size-8"/>Proyectos</h2>
+  <Project {...projects[0]} />
+  <Project {...projects[2]} />
+  <Project {...projects[0]} />
+  <Project {...projects[1]} />
+  <Project {...projects[2]} />
 </section>
+

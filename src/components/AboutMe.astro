@@ -5,6 +5,7 @@ import LinkedIn from "../icons/LinkedIn.astro";
 import Bagde from "./Bagde.astro";
 import SocialPill from "./SocialPill.astro";
 import perfil from "/src/assets/perfil.jpg";
+import Mail from "../icons/Mail.astro";
 ---
 
 <section
@@ -16,7 +17,9 @@ import perfil from "/src/assets/perfil.jpg";
     alt="Diego Alejandro Garcia Deus"
     class="rounded-full w-20 h-20"
   />
-  <h1 class="text-principal-about transition-all duration-500 text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+  <h1
+    class="text-principal-about transition-all duration-500 text-white dark:text-gray-900 text-5xl font-bold flex flex-row gap-x-4 pb-10"
+  >
     Hey soy Diego
     <div class="flex justify-center items-center">
       <a
@@ -33,28 +36,35 @@ import perfil from "/src/assets/perfil.jpg";
     <span class="text-violet-700"
       >👨‍💻 +3 años de experiencia Desarrollador Frontend y Backend.</span
     >
-    <span class="text-normal-light transition-all duration-500">
+    <span class="text-normal-light dark:text-gray-900 transition-all duration-500">
       De Tenerife, España 🇪🇸. Especializado en buscar soluciones a problemas
     </span>
     <span class="text-fuchsia-700"> originales, complejas y unicas. </span>
   </h2>
   <nav class="flex flex-row gap-x-4 mt-9">
     <SocialPill href="https://github.com/Diego04012002">
-      <GitHub class="icons w-6 h-6" />
+      <GitHub class="icons size-6" />
       GitHub
     </SocialPill>
     <SocialPill
       href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
     >
-      <LinkedIn class="icons w-6 h-6" />
+      <LinkedIn class="icons size-6" />
       LinkedIn
+    </SocialPill>
+    <SocialPill
+      href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
+    >
+      <Mail class="icons size-6" />
+      dgarciadeus@gmail.com
     </SocialPill>
   </nav>
   <div
     class="absolute bottom-0 left-0 right-0 flex justify-center items-center mb-3"
   >
-    <a href="#projects" class="link-ball">
-      <span class="animation-ball animate-bounce transition duration-300"></span>
+    <a href="#experience" class="link-ball">
+      <span class="animation-ball animate-bounce transition duration-300 dark:bg-black"
+      ></span>
     </a>
   </div>
   <style>
@@ -80,7 +90,7 @@ import perfil from "/src/assets/perfil.jpg";
       top: 50%;
       width: 10px;
       height: 10px;
-      background-color: #fff;
+      background-color: #9f8d8d;
       border-radius: 50%;
     }
   </style>
