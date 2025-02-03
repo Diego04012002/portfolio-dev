@@ -6,7 +6,7 @@ import LinksProjects from "./LinksProjects.astro";
 <div class="border-2 border-fuchsia-700 p-4 rounded-lg">
   <div class="flex justify-center items-center gap-x-3">
     <div class="flex flex-col  items-center mr-4 gap-y-4">
-      <h2 class="title-project text-xl font-semibold">{Astro.props.project.name}</h2>
+      <h2 class="title-project text-xl font-semibold transition duration-300">{Astro.props.project.name}</h2>
       <Image
         height={240}
         width={240}
@@ -15,7 +15,7 @@ import LinksProjects from "./LinksProjects.astro";
         class="object-cover rounded-lg mb-4"
       />
     </div>
-    <span class="description-project text-xl mb-4">{Astro.props.project.description}</span>
+    <span class="description-project text-xl mb-4 transition duration-300">{Astro.props.project.description}</span>
   </div>
   <div class="flex gap-y-4 mt-4 gap-x-4">
     <LinksProjects href={Astro.props.project.link}>

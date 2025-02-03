@@ -6,6 +6,7 @@ body.light .bg-main div {
     #fff 40%,
     #a3c 100%
   ) !important;
+  transition: background 0.5s ease;
 }
 
 body.light .text-normal-light,
@@ -15,6 +16,7 @@ body.light .title-project,
 body.light .description-project,
 body.light .nav-list {
   color: black !important;
+  transition: color 0.5s ease;
 }
 
 body.light .icons,
@@ -22,6 +24,13 @@ body.light .links-project {
   color: black;
   border-color: black;
   fill: black;
+  background-color: color-mix(in oklab, black 5%, transparent);
+  transition: color 0.5s ease, border-color 0.5s ease,
+  fill 0.5s ease scale 0.5s ease;
+}
+
+body.light .links-project:hover {
+  scale: 1.2;
 }
 
 body.light .header {
@@ -30,4 +39,5 @@ body.light .header {
 
 body.light .animation-ball::before {
   background-color: black;
+  transition: background-color 0.5s ease;
 }
