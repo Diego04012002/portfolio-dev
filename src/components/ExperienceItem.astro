@@ -6,9 +6,10 @@ interface Props {
   description: string;
   link: string;
   practica: boolean;
+  job: boolean;
 }
 
-const { title, company, date, description, link, practica } = Astro.props;
+const { title, company, date, description, link, practica, job } = Astro.props;
 ---
 
 <div
@@ -19,12 +20,21 @@ const { title, company, date, description, link, practica } = Astro.props;
   class="mb-1 text-sm font-normal leading-none text-sky-200/90 dark:text-blue-800"
   >{date}</time
 >
-<h3 class="flex flex-row items-center gap-x-2 text-lg font-semibold text-fuchsia-700 dark:text-gray-800 mt-2">
+<h3
+  class={`flex flex-row items-center gap-x-2 text-lg font-semibold text-fuchsia-700 dark:text-gray-800 md:flex-row mt-2  ${practica || job ? "xxs:flex-col xxs:items-start xxs:mb-2 xs:flex-row" : ""}`}
+>
   {title} - {company}
   {
     practica && (
-      <span class="rounded-md bg-slate-800 py-0.5 px-2.5 border border-transparent text-sm text-white transition-all shadow-sm">
-        Practicas de empresa
+      <span class="rounded-md bg-slate-800/70 py-0.5 px-2.5 w-auto border border-transparent text-sm text-white transition-all shadow-sm hover:scale-105">
+        Practicas
+      </span>
+    )
+  }
+  {
+    job && (
+      <span class="rounded-md bg-teal-900/70 py-0.5 px-2.5 border border-transparent text-sm text-white transition-all shadow-sm dark:bg-cyan-600 hover:scale-105">
+        Trabajo
       </span>
     )
   }
