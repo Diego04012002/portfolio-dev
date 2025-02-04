@@ -12,32 +12,37 @@ const EXPERIENCE = [
     link: "https://www.dstech.it",
   },
   {
-    title:"Frotend Developer",
+    title: "Frotend Developer",
     company: "FSV",
-    date:"2023-2023",
-    description:"Desarrollador de programas para la automatización del control de las maquinas de vending a traves de su codigo unico",
-    link: "https://www.fsv.es"
+    date: "2023-2023",
+    description:
+      "Desarrollador de programas para la automatización del control de las maquinas de vending a traves de su codigo unico",
+    link: "https://www.fsv.es",
   },
   {
-    title:"Frotend Developer",
+    title: "Frotend Developer",
     company: "FSV",
-    date:"2022-2022",
-    description:"Desarrollar paginas webs para la muestra de datos y estadisticas de la empresa",
-    link: "https://www.fsv.es"
-  }
+    date: "2022-2022",
+    description:
+      "Desarrollar paginas webs para la muestra de datos y estadisticas de la empresa",
+    link: "https://www.fsv.es",
+  },
 ];
 ---
 
-
 <section
-  id="experience"
+  id="experiencia"
   class="w-full lg:w-[740px] mx-auto flex flex-col justify-center mb-40"
 >
-  <h2 class="text-3xl font-semibold mb-5 opacity-50 flex items-center gap-x-5 mt-20 dark:text-gray-900"> <WorkExperience class="size-8"/>Experiencia laboral</h2>
-  <ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3.5">
+  <h2
+    class="text-3xl font-semibold mb-5 text-white flex items-center gap-x-5 mt-20 dark:text-gray-900"
+  >
+    <WorkExperience class="size-8" />Experiencia laboral
+  </h2>
+  <ol class="relative border-s border-blue-400 dark:border-gray-700 ml-3.5">
     {
       EXPERIENCE.map((experience) => (
-        <li class="mb-10 ms-4">
+        <li class="mb-10 ms-8">
           <ExperienceItem {...experience} />
         </li>
       ))

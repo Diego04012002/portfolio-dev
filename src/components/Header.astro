@@ -1,22 +1,109 @@
+---
+import ThemeToggle from "./ThemeToggle.astro"
+
+const navItems = [
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:miduga@gmail.com",
+  },
+]
+---
+
 <header
-  class="flex items-center justify-center py-5 mx-auto w-full xl:w-[1120px] z-50 backdrop-blur-lg bg-black/80 dark:bg-white/80"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2 "
 >
-  <nav class="flex flex-row gap-x-10 opacity-80">
-    <a
-      class="hover:scale-110 hover:opacity-70 transition duration-75 dark:text-gray-900"
-      href="#">Home</a
-    >
-    <a
-      class="hover:scale-110 hover:opacity-70 transition duration-75 dark:text-gray-900"
-      href="#experience">Experience</a
-    >
-    <a
-      class="hover:scale-110 hover:opacity-70 transition duration-75 dark:text-gray-900"
-      href="#projects">Proyectos</a
-    >
-    <a
-      class="hover:scale-110 hover:opacity-70 transition duration-75 dark:text-gray-900"
-      href="/">Contact</a
-    >
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full bg-[#1f2937] opacity-95 text-white dark:text-black dark:bg-white  dark:border-white justify-center items-center"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition dark:text-black hover:text-blue-500"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+    <ThemeToggle />
   </nav>
 </header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section")
+    const navItems = document.querySelectorAll("header nav a")
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-blue-500")
+            } else {
+              item.classList.remove("text-blue-500")
+            }
+          })
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    })
+
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect()
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section)
+        })
+      }
+    }
+  })
+</script>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      background-color: rgba(31, 41, 55, 0);
+      background-color: rgba(255, 255, 255, 0);
+    }
+    to {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+  }
+</style>

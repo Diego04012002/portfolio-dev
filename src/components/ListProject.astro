@@ -1,39 +1,72 @@
 ---
+import Angular from "../icons/Angular.astro";
 import Code from "../icons/Code.astro";
+import SpringBoot from "../icons/SpringBoot.astro";
+
+const TAGS = {
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-fuchsia-100/90 text-gray-900",
+    icon: Angular,
+  },
+  SPRING: {
+    name: "SpringBoot",
+    class: "bg-green-100/90 text-gray-900",
+    icon: SpringBoot,
+  },
+};
 
 const PROJECTS = [
   {
     title: "Projecto 1",
-    description: "Descripcipon de un proyecto largo que se ha realizado en el pasado",
+    description:
+      "Descripcipon de un proyecto largo que se ha realizado en el pasado y que tambien me ha gustado hacerlo completo entero yo solo sin tutorial",
     link: "https://google.com",
-    github:"#",
-    image:"/projects/shots.png",
-    tags:[
-      "Angular",
-      "SpringBoot",
-      "Supabase"
-    ]
+    github: "#github",
+    image: "/projects/shots.png",
+    tags: [TAGS.ANGULAR, TAGS.SPRING],
   },
 ];
 ---
 
-<section class="w-full lg:w-[740px] flex flex-col gap-4 mb-70 mt-20 " id="projects">
-  <h2 class="text-3xl font-semibold mb-5 opacity-50 flex items-center gap-x-5 mt-20 dark:text-gray-900"> <Code class="size-8"/>Ultimos proyectos</h2>
+<section
+  class="w-full lg:w-[740px] flex flex-col gap-4 mb-70 mt-20"
+  id="proyectos"
+>
+  <h2
+    class="text-3xl font-semibold mb-5 text-white flex items-center gap-x-5 mt-20 dark:text-gray-900"
+  >
+    <Code class="size-8" />Ultimos proyectos
+  </h2>
   {
-    PROJECTS.map(project =>(
-      <article class="border border-blue-900 rounded-2xl shadow-2xl shadow-amber-100/50 dark:border-gray-950 dark:shadow-cyan-600 px-10 py-10">
-        <h3 class="text-2xl font-semibold text-fuchsia-700 mb-2 dark:text-gray-950">{project.title}</h3>
-        <p class="text-lg mb-4 text-pretty dark:text-gray-800">{project.description}</p>
-        <ul>
-          {
-            project.tags.map(tag=>(
-              <li class="text-white/50 dark:text-gray-800/50">{tag}</li>
-            ))
-          }
+    PROJECTS.map((project) => (
+      <article class="border-2 border-blue-900 rounded-2xl shadow-2xl shadow-amber-100/50 group dark:border-gray-950 dark:shadow-cyan-600 px-10 py-10">
+        <h3 class="text-2xl font-semibold  text-fuchsia-700/95 mb-2 dark:text-gray-950">
+          {project.title}
+        </h3>
+        <p class="text-lg mb-4 text-pretty dark:text-gray-800">
+          {project.description}
+        </p>
+        <ul class="flex flex-row gap-x-2 items-center">
+          {project.tags.map((tag) => (
+            <li class="text-white/50 dark:text-gray-800/50">
+              <span
+                class={`flex gap-x-2 items-center rounded-full border-1 py-1 px-2 text-sm ${tag.class}`}
+              >
+                <tag.icon class="size-6" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
         </ul>
-        <img class="rounded-2xl shadow-2xl shadow-white/20 hover:scale-105 dark:shadow-gray-950/80 transition-transform duration-500 mt-10" src={project.image} alt={`Captura de pantalla del proyecto ${project.title}`}>
+        <a href={project.github} class="cursor-pointer">
+          <img
+            class="rounded-2xl shadow-2xl shadow-white/20 group-hover:-translate-y-2 dark:shadow-gray-950/80 transition-transform duration-500 mt-10"
+            src={project.image}
+            alt={`Captura de pantalla del proyecto ${project.title}`}
+          />
+        </a>
       </article>
     ))
   }
 </section>
-
