@@ -5,9 +5,10 @@ interface Props {
   date: string;
   description: string;
   link: string;
+  practica: boolean;
 }
 
-const { title, company, date, description, link } = Astro.props;
+const { title, company, date, description, link, practica } = Astro.props;
 ---
 
 <div
@@ -18,8 +19,15 @@ const { title, company, date, description, link } = Astro.props;
   class="mb-1 text-sm font-normal leading-none text-sky-200/90 dark:text-blue-800"
   >{date}</time
 >
-<h3 class="text-lg font-semibold text-fuchsia-700 dark:text-gray-800 mt-2">
+<h3 class="flex flex-row items-center gap-x-2 text-lg font-semibold text-fuchsia-700 dark:text-gray-800 mt-2">
   {title} - {company}
+  {
+    practica && (
+      <span class="rounded-md bg-slate-800 py-0.5 px-2.5 border border-transparent text-sm text-white transition-all shadow-sm">
+        Practicas de empresa
+      </span>
+    )
+  }
 </h3>
 <p class="mb-4 text-base font-normal text-pretty text-white dark:text-gray-400">
   {description}

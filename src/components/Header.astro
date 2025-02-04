@@ -26,14 +26,14 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2 xxs:px-10 xs:px-10"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full border-0 border-transparent opacity-95 text-white dark:text-black justify-center items-center space-x-3"
+    class="flex px-3 text-sm font-medium rounded-full border-0 border-transparent opacity-95 text-white dark:text-black justify-center items-center space-x-3 xxs:space-x-1"
   >
     {navItems.map((link) => (
       <a
-        class="relative block px-2 py-2 transition dark:text-black hover:text-blue-500 dark:hover:text-blue-500"
+        class="relative block px-2 py-2 transition xxs:text-xs xs:text-xs md:text-[15px]  dark:text-black hover:text-blue-500 dark:hover:text-blue-500"
         aria-label={link.label}
         href={link.url}
       >
@@ -46,7 +46,7 @@ const navItems = [
     <!-- Botón para activar/desactivar el scroll automático -->
     <button
       id="toggleScroll"
-      class="ml-2 px-3 py-1 text-xs font-bold rounded-full bg-blue-600 hover:bg-blue-700 transition text-white"
+      class="ml-2 px-3 py-1 text-xs font-bold rounded-full bg-blue-600 hover:bg-blue-700 transition text-white xxs:hidden  xs:hidden md:block lg:block"
     >
       Activar Scroll Auto
     </button>
