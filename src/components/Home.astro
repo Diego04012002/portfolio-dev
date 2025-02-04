@@ -7,67 +7,73 @@ import Mail from "../icons/Mail.astro";
 ---
 
 <section
-  class="w-full h-dvh lg:w-[740px] flex flex-col justify-center pb-48 xxs:mt-24"
+  class="w-full h-dvh lg:w-[740px] flex flex-col justify-center md:pb-48 xxs:mt-24 md:mt-0 xxs:pb-30"
 >
-  <div
-    class="flex flex-row items-center gap-x-4 lg:flex-col lg:items-start lg:mb-4 md:flex-col md:items-start md:mb-4 xs:mb-7 xxs:mb-7"
-  >
-    <Image
-      src={perfil}
-      alt="Diego Alejandro Garcia Deus"
-      class="rounded-full w-20 h-20"
-    />
-    <h1
-      class="transition-all duration-500 text-white dark:text-gray-900 text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 md:flex-row lg:flex-row xs:flex-col xs:gap-y- xxs:flex-col xxs:gap-y-2"
+  <div class="xxs:mb-20 md:mt-44">
+    <div
+      class="flex flex-row items-center gap-x-4 lg:flex-col lg:items-start lg:mb-4 md:flex-col md:items-start md:mb-4 xs:mb-7 xxs:mb-7"
     >
-      Hey soy Diego
-      <div class="flex justify-center items-center">
-        <a
-          href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
-          target="_blank"
-          rel="noopener"
-          class="flex items-center transition md:justify-center md:hover:scale-105"
-        >
-          <div class="flex items-center">
-            <span
-              class="relative inline-flex overflow-hidden rounded-full p-[1px]"
-            >
+      <Image
+        src={perfil}
+        alt="Diego Alejandro Garcia Deus"
+        class="rounded-full w-20 h-20"
+      />
+      <h1
+        class="transition-all duration-500 text-white dark:text-gray-900 text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 md:flex-row lg:flex-row xs:flex-col xs:gap-y- xxs:flex-col xxs:gap-y-2"
+      >
+        Hey soy Diego
+        <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center transition md:justify-center md:hover:scale-105"
+          >
+            <div class="flex items-center">
               <span
-                class="absolute inset-[-1000%] animate-[spin_1s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF00FF_0%,#FF1493_25%,#FF69B4_50%,#FF1493_75%,#FF00FF_100%)]"
-              ></span>
-              <div
-                class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-fuchsia-400 bg-gray-800 rounded-full cursor-pointer dark:bg-white/80 dark:text-gray-800 backdrop-blur-3xl whitespace-nowrap"
+                class="relative inline-flex overflow-hidden rounded-full p-[1px]"
               >
-                Disponible para trabajar
-              </div>
-            </span>
-          </div>
-        </a>
-      </div>
-    </h1>
+                <span
+                  class="absolute inset-[-1000%] animate-[spin_1s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF00FF_0%,#FF1493_25%,#FF69B4_50%,#FF1493_75%,#FF00FF_100%)]"
+                ></span>
+                <div
+                  class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-fuchsia-400 bg-gray-800 rounded-full cursor-pointer dark:bg-white/80 dark:text-gray-800 backdrop-blur-3xl whitespace-nowrap"
+                >
+                  Disponible para trabajar
+                </div>
+              </span>
+            </div>
+          </a>
+        </div>
+      </h1>
+    </div>
+    <h2 class="text-2xl opacity-80 text-wrap max-w-[700px]">
+      <span class="text-violet-700 xxs:text-xl md:text-2xl"
+        >👨‍💻 +3 años de experiencia Desarrollador Frontend y Backend.</span
+      >
+      <span
+        class="text-normal-light dark:text-gray-900 xxs:text-xl md:text-2xl"
+      >
+        De Tenerife, España 🇪🇸. Especializado en buscar en problemas complejos
+        soluciones
+      </span>
+      <span class="text-fuchsia-700 xxs:text-xl md:text-2xl">
+        originales y unicas.
+      </span>
+    </h2>
+    <nav class="flex flex-row gap-x-4 mt-9">
+      <SocialPill
+        href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
+      >
+        <LinkedIn class="size-4 md:size-6" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="mailto:dgarciadeus@gmail.com">
+        <Mail class="size-4 md:size-6" />
+        dgarciadeus@gmail.com
+      </SocialPill>
+    </nav>
   </div>
-  <h2 class="text-2xl opacity-80 text-wrap max-w-[700px]">
-    <span class="text-violet-700 xxs:text-xl md:text-2xl"
-      >👨‍💻 +3 años de experiencia Desarrollador Frontend y Backend.</span
-    >
-    <span class="text-normal-light dark:text-gray-900 xxs:text-xl md:text-2xl">
-      De Tenerife, España 🇪🇸. Especializado en buscar en problemas complejos
-      soluciones
-    </span>
-    <span class="text-fuchsia-700 xxs:text-xl md:text-2xl"> originales y unicas. </span>
-  </h2>
-  <nav class="flex flex-row gap-x-4 mt-9">
-    <SocialPill
-      href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
-    >
-      <LinkedIn class="size-4 md:size-6" />
-      LinkedIn
-    </SocialPill>
-    <SocialPill href="mailto:dgarciadeus@gmail.com">
-      <Mail class="size-4 md:size-6" />
-      dgarciadeus@gmail.com
-    </SocialPill>
-  </nav>
   <div
     class="absolute bottom-0 left-0 right-0 flex justify-center items-center mb-3"
   >
