@@ -1,48 +1,39 @@
 ---
-import type { ACTION_ERROR_CODES } from "astro:actions";
-import Web from "../icons/Web.astro";
-import Project from "./Project.astro";
+import Code from "../icons/Code.astro";
 
-const projects = [
+const PROJECTS = [
   {
-    name: "Project One",
+    title: "Projecto 1",
     description: "Descripcipon de un proyecto largo que se ha realizado en el pasado",
     link: "https://google.com",
-    image:"https://flowbite.com/docs/images/blog/image-4.jpg",
-    languages:[
+    github:"#",
+    image:"/projects/shots.png",
+    tags:[
       "Angular",
-      "SpringBoot"
-    ]
-  },
-  {
-    name: "Project Two",
-    description: "Descripcipon de un proyecto largo que se ha realizado en el pasado",
-    link: "#",
-    image:"https://flowbite.com/docs/images/blog/image-4.jpg",
-    languages:[
-      "Angular",
-      "SpringBoot"
-    ]
-  },
-  {
-    name: "Project Three",
-    description: "Descripcipon de un proyecto largo que se ha realizado en el pasado",
-    link: "#",
-    image:"https://flowbite.com/docs/images/blog/image-4.jpg",
-    languages:[
-      "Angular",
-      "SpringBoot"
+      "SpringBoot",
+      "Supabase"
     ]
   },
 ];
 ---
 
 <section class="w-full lg:w-[740px] flex flex-col gap-4 mb-70 mt-20 " id="projects">
-  <h2 class="text-2xl font-semibold mb-5 opacity-50 flex items-center gap-x-5 mt-20 dark:text-gray-900"> <Web class="size-8"/>Proyectos</h2>
-  <Project {...projects[0]} />
-  <Project {...projects[2]} />
-  <Project {...projects[0]} />
-  <Project {...projects[1]} />
-  <Project {...projects[2]} />
+  <h2 class="text-3xl font-semibold mb-5 opacity-50 flex items-center gap-x-5 mt-20 dark:text-gray-900"> <Code class="size-8"/>Ultimos proyectos</h2>
+  {
+    PROJECTS.map(project =>(
+      <article class="border border-blue-900 rounded-2xl shadow-2xl shadow-amber-100/50 dark:border-gray-950 dark:shadow-cyan-600 px-10 py-10">
+        <h3 class="text-2xl font-semibold text-fuchsia-700 mb-2 dark:text-gray-950">{project.title}</h3>
+        <p class="text-lg mb-4 text-pretty dark:text-gray-800">{project.description}</p>
+        <ul>
+          {
+            project.tags.map(tag=>(
+              <li class="text-white/50 dark:text-gray-800/50">{tag}</li>
+            ))
+          }
+        </ul>
+        <img class="rounded-2xl shadow-2xl shadow-white/20 hover:scale-105 dark:shadow-gray-950/80 transition-transform duration-500 mt-10" src={project.image} alt={`Captura de pantalla del proyecto ${project.title}`}>
+      </article>
+    ))
+  }
 </section>
 

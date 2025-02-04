@@ -9,52 +9,54 @@ import Mail from "../icons/Mail.astro";
 ---
 
 <section
-  class="w-full h-dvh lg:w-[740px] mx-auto flex flex-col justify-center pb-40 mt-20"
+  class="w-full h-dvh lg:w-[740px] mx-auto flex flex-col justify-center pb-40"
 >
-  <Image
+  <div class="flex flex-row items-center gap-x-4 lg:flex-col lg:items-start lg:mb-4 md:flex-col md:items-start md:mb-4">
+    <Image
     src={perfil}
     alt="Diego Alejandro Garcia Deus"
     class="rounded-full w-20 h-20"
   />
-  <h1
-    class="text-principal-about transition-all duration-500 text-white dark:text-gray-900 text-5xl font-bold flex flex-row gap-x-4 pb-10"
-  >
-    Hey soy Diego
-    <div class="flex justify-center items-center">
-      <a
-        href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
-        target="_blank"
-        rel="noopener"
-        class="flex flex-row gap-x-2 justify-center items-center"
-      >
-        <Bagde>Disponible para trabajar</Bagde>
-      </a>
-    </div>
-  </h1>
-  <h2 class="text-2xl opacity-80 text-wrap">
+    <h1
+      class="transition-all duration-500 text-white dark:text-gray-900 text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4"
+    >
+      Hey soy Diego 
+      <div class="flex justify-center items-center">
+        <a
+          href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
+          target="_blank"
+          rel="noopener"
+          class="flex flex-row gap-x-2 justify-center items-center"
+        >
+          <Bagde>Disponible para trabajar</Bagde>
+        </a>
+      </div>
+    </h1>
+  </div>
+  <h2 class="text-2xl opacity-80 text-wrap max-w-[700px]">
     <span class="text-violet-700"
       >👨‍💻 +3 años de experiencia Desarrollador Frontend y Backend.</span
     >
-    <span class="text-normal-light dark:text-gray-900 transition-all duration-500">
+    <span class="text-normal-light dark:text-gray-900">
       De Tenerife, España 🇪🇸. Especializado en buscar en problemas complejos soluciones
     </span>
     <span class="text-fuchsia-700"> originales y unicas. </span>
   </h2>
   <nav class="flex flex-row gap-x-4 mt-9">
     <SocialPill href="https://github.com/Diego04012002">
-      <GitHub class="icons size-6" />
+      <GitHub class="size-4 md:size-6" />
       GitHub
     </SocialPill>
     <SocialPill
       href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
     >
-      <LinkedIn class="icons size-6" />
+      <LinkedIn class="size-4 md:size-6" />
       LinkedIn
     </SocialPill>
     <SocialPill
-      href="https://www.linkedin.com/in/diego-alejandro-garcía-deus-22b183252/"
+      href="mailto:dgarciadeus@gmail.com"
     >
-      <Mail class="icons size-6" />
+      <Mail class="size-4 md:size-6" />
       dgarciadeus@gmail.com
     </SocialPill>
   </nav>
