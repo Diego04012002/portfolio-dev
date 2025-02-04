@@ -26,24 +26,6 @@ const { title, description }: Props = Astro.props;
       } else {
         document.documentElement.classList.remove("dark");
       }
-      document.addEventListener("wheel", (event) => {
-        if (event.deltaY > 0) {
-          let element = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
-          let nextSection;
-          if (element) {
-            let section = element.closest("section");
-            if (section) {
-              nextSection = section.nextElementSibling;
-              if (nextSection) {
-                nextSection.scrollIntoView({ behavior: "smooth" });
-              }
-            }
-          }
-          if (nextSection) {
-            nextSection.scrollIntoView({ behavior: "smooth" });
-          }
-        }
-      });
     </script>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
