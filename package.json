@@ -15,7 +15,8 @@
     "tailwindcss": "^4.0.3"
   },
   "devDependencies": {
-    "standard": "^17.1.2"
+    "standard": "^17.1.2",
+    "bun":"1.2.2"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
