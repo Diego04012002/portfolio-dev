@@ -49,42 +49,47 @@ const PROJECTS = [
   </h2>
   {
     PROJECTS.map((project) => (
-      <article class="relative border-2 border-blue-900 rounded-2xl shadow-2xl shadow-amber-100/50 dark:border-gray-950 dark:shadow-cyan-600 mb-10 px-10 pb-10 pt-16 overflow-hidden">
-        <a href={project.github} class="cursor-pointer block group">
-          <img
-            class="md:absolute md:top-[-50px] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full md:max-w-[100%] md:rounded-b-[170px] 
-            md:group-hover:translate-y-14 md:group-hover:px-2 md:group-hover:py-2 md:group-hover:rounded-2xl 
-            dark:shadow-gray-950/80 transition-all duration-500"
-            src={project.image}
-            alt={`Captura de pantalla del proyecto ${project.title}`}
-          />
-        </a>
-        <div class="group-hover:none transition-transform duration-500">
-          <h3 class="text-2xl font-semibold text-fuchsia-700/95 mb-2 dark:text-gray-950 md:mt-30 xs:mt-10 xxs:mt-8">
-            {project.title}
-          </h3>
-          <p class="text-lg mb-4 text-pretty dark:text-gray-800">
-            {project.description}
-          </p>
-          <ul class="flex flex-row gap-x-2 items-center">
-            {project.tags.map((tag) => (
-              <li class="text-white/50 dark:text-gray-800/50">
-                <span
-                  class={`flex gap-x-2 items-center rounded-full border-1 py-1 px-2 text-sm ${tag.class}`}
-                >
-                  <tag.icon class="size-6" />
-                  {tag.name}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </article>
+    <article class="relative border-2 border-blue-900 rounded-2xl shadow-2xl shadow-amber-100/50 dark:border-gray-950 dark:shadow-cyan-600 mb-10 px-10 pb-10 pt-16 overflow-hidden">
+      <a href={project.github} class="cursor-pointer block peer">
+        <img
+          class="md:absolute md:top-[-50px] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full md:max-w-[100%] 
+          md:rounded-b-[170px] md:transition-all md:duration-500
+          hover:translate-y-14 hover:px-2 hover:py-2 hover:rounded-2xl 
+          dark:shadow-gray-950/80"
+          src={project.image}
+          alt={`Captura de pantalla del proyecto ${project.title}`}
+        />
+      </a>
+
+      <!-- Div que se anima cuando se hace hover sobre el <a> -->
+      <div class="md:transition-all md:duration-500 peer-hover:translate-y-60">
+        <h3 class="text-2xl font-semibold text-fuchsia-700/95 mb-2 dark:text-gray-950 md:mt-30 xs:mt-10 xxs:mt-8">
+          {project.title}
+        </h3>
+        <p class="text-lg mb-4 text-pretty dark:text-gray-800">
+          {project.description}
+        </p>
+        <ul class="flex flex-row gap-x-2 items-center">
+          {project.tags.map((tag) => (
+            <li class="text-white/50 dark:text-gray-800/50">
+              <span
+                class={`flex gap-x-2 items-center rounded-full border-1 py-1 px-2 text-sm ${tag.class}`}
+              >
+                <tag.icon class="size-6" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
     ))
   }
 
   <div class="flex justify-center mt-10">
-    <span class="relative inline-flex overflow-hidden rounded-full backdrop-blur-3xl p-[2px] md:w-[300px] xxs:w-[260px]">
+    <span
+      class="relative inline-flex overflow-hidden rounded-full backdrop-blur-3xl p-[2px] md:w-[300px] xxs:w-[260px]"
+    >
       <span
         class="absolute inset-[-1000%] animate-[spin_1s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0000FF_0%,#1E90FF_25%,#87CEEB_50%,#1E90FF_75%,#0000FF_100%)]"
       ></span>
