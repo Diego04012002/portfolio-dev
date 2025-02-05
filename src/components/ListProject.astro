@@ -26,13 +26,19 @@ const PROJECTS = [
     image: "/projects/shots.png",
     tags: [TAGS.ANGULAR, TAGS.SPRING],
   },
+  {
+    title: "Projecto 1",
+    description:
+      "Descripcipon de un proyecto largo que se ha realizado en el pasado y que tambien me ha gustado hacerlo completo entero yo solo sin tutorial",
+    link: "https://google.com",
+    github: "#github",
+    image: "/projects/shots.png",
+    tags: [TAGS.ANGULAR, TAGS.SPRING],
+  },
 ];
 ---
 
-<section
-  class="w-full lg:w-[740px] flex flex-col gap-4 mb-32"
-  id="proyectos"
->
+<section class="w-full lg:w-[740px] flex flex-col justify-center gap-4 mb-32" id="proyectos">
   <h2
     class="text-3xl font-semibold mb-5 text-white flex items-center gap-x-5 mt-14 dark:text-gray-900"
   >
@@ -40,32 +46,36 @@ const PROJECTS = [
   </h2>
   {
     PROJECTS.map((project) => (
-      <article class="border-2 border-blue-900 rounded-2xl shadow-2xl shadow-amber-100/50 group dark:border-gray-950 dark:shadow-cyan-600 px-10 py-10">
-        <h3 class="text-2xl font-semibold  text-fuchsia-700/95 mb-2 dark:text-gray-950">
-          {project.title}
-        </h3>
-        <p class="text-lg mb-4 text-pretty dark:text-gray-800">
-          {project.description}
-        </p>
-        <ul class="flex flex-row gap-x-2 items-center">
-          {project.tags.map((tag) => (
-            <li class="text-white/50 dark:text-gray-800/50">
-              <span
-                class={`flex gap-x-2 items-center rounded-full border-1 py-1 px-2 text-sm ${tag.class}`}
-              >
-                <tag.icon class="size-6" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-        <a href={project.github} class="cursor-pointer">
+      <article class="relative border-2 border-blue-900 rounded-2xl shadow-2xl shadow-amber-100/50 dark:border-gray-950 dark:shadow-cyan-600 mb-10 px-10 pb-10 pt-16 overflow-hidden">
+        <a href={project.github} class="cursor-pointer block group">
           <img
-            class="rounded-2xl shadow-2xl shadow-white/20 group-hover:-translate-y-2 dark:shadow-gray-950/80 transition-transform duration-500 mt-10"
+            class="md:absolute md:top-[-50px] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full md:max-w-[100%] md:rounded-b-[200px] 
+            md:group-hover:translate-y-14 md:group-hover:px-2 md:group-hover:py-2 md:group-hover:rounded-2xl 
+            dark:shadow-gray-950/80 transition-all duration-500"
             src={project.image}
             alt={`Captura de pantalla del proyecto ${project.title}`}
           />
         </a>
+        <div class="group-hover:none transition-transform duration-500">
+          <h3 class="text-2xl font-semibold text-fuchsia-700/95 mb-2 dark:text-gray-950 md:mt-30 xs:mt-10 xxs:mt-8">
+            {project.title}
+          </h3>
+          <p class="text-lg mb-4 text-pretty dark:text-gray-800">
+            {project.description}
+          </p>
+          <ul class="flex flex-row gap-x-2 items-center">
+            {project.tags.map((tag) => (
+              <li class="text-white/50 dark:text-gray-800/50">
+                <span
+                  class={`flex gap-x-2 items-center rounded-full border-1 py-1 px-2 text-sm ${tag.class}`}
+                >
+                  <tag.icon class="size-6" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </article>
     ))
   }
