@@ -6,6 +6,7 @@
   --breakpoint-xs: 30rem;
   --breakpoint-xxs: 20rem;
   --animate-carousel-infinite: infinite 25s linear infinite;
+  --animate-custom-move: infinite custom-move 5s ease-out ;
 
   @keyframes infinite {
     from {
@@ -14,5 +15,15 @@
     to {
       transform: translateX(-100%);
     }
+  }
+
+  @keyframes custom-move {
+    0%{ transform: rotate(1.5deg); }
+    20% { transform: rotate(-1.5deg); }
+    40% { transform: rotate(1.5deg); }
+    60% { transform: rotate(-1.5deg); }
+    70% { transform: rotate(1.5deg); }
+    80% { transform: rotate(-1.5deg); }
+    100% { transform: rotate(1.5deg); }
   }
 }
