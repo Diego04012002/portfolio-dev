@@ -1,5 +1,5 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro"
+import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
   {
@@ -22,7 +22,7 @@ const navItems = [
     label: "contacto",
     url: "mailto:dgarciadeus@gmail.com",
   },
-]
+];
 ---
 
 <header
@@ -31,25 +31,27 @@ const navItems = [
   <nav
     class="flex px-3 text-sm font-medium rounded-full border-0 border-transparent opacity-95 text-white dark:text-black justify-center items-center space-x-3 xxs:space-x-0"
   >
-    {navItems.map((link) => (
-      <a
-        class="relative block px-2 py-2 transition xxs:text-xs xs:text-xs md:text-[15px]  dark:text-black hover:text-blue-500 dark:hover:text-blue-500"
-        aria-label={link.label}
-        href={link.url}
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition xxs:text-xs xs:text-xs md:text-[15px]  dark:text-black hover:text-blue-500 dark:hover:text-blue-500"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+
+    <div class="border-l-[1px] border-white/50 flex items-center pl-1">
+      <ThemeToggle />
+      <button
+        id="toggleScroll"
+        class="ml-2 px-3 py-1 text-xs font-bold rounded-full bg-blue-600 hover:bg-blue-700 transition text-white xxs:hidden xs:hidden md:block lg:block"
       >
-        {link.title}
-      </a>
-    ))}
-
-    <ThemeToggle />
-
-    <!-- Botón para activar/desactivar el scroll automático -->
-    <button
-      id="toggleScroll"
-      class="ml-2 px-3 py-1 text-xs font-bold rounded-full bg-blue-600 hover:bg-blue-700 transition text-white xxs:hidden  xs:hidden md:block lg:block"
-    >
-      Activar Scroll Auto
-    </button>
+        Activar Scroll Auto
+      </button>
+    </div>
   </nav>
 </header>
 <style>
@@ -65,82 +67,84 @@ const navItems = [
       background-color: rgba(255, 255, 255, 0);
     }
     to {
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
     }
   }
 </style>
 <script>
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("header nav a");
-    const scrollButton = document.getElementById("toggleScroll");
+  const sections = document.querySelectorAll("section");
+  const navItems = document.querySelectorAll("header nav a");
+  const scrollButton = document.getElementById("toggleScroll");
 
-    let autoScrollEnabled = false;
+  let autoScrollEnabled = false;
 
-    const callback = (entries:any) => {
-      entries.forEach((entry:any) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-blue-500");
-            } else {
-              item.classList.remove("text-blue-500");
-            }
-          });
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    });
-
-    sections.forEach((section) => observer.observe(section));
-
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect();
-      } else {
-        sections.forEach((section) => observer.observe(section));
-      }
-    };
-
-    // Función de scroll automático
-    const handleScroll = (event:any) => {
-      if (!autoScrollEnabled) return; // Si está apagado, no hacer nada
-      event.preventDefault(); // Evita el scroll normal
-
-      const currentSection = Array.from(sections).find((section) => {
-        const rect = section.getBoundingClientRect();
-        return rect.top >= 0 && rect.top < window.innerHeight;
-      });
-
-      if (!currentSection) return;
-
-      if (event.deltaY > 0) {
-        // Scroll hacia abajo -> Ir a la siguiente sección
-        const nextSection = currentSection.nextElementSibling;
-        if (nextSection) nextSection.scrollIntoView({ behavior: "smooth" });
-      } else if (event.deltaY < 0) {
-        // Scroll hacia arriba -> Ir a la sección anterior
-        const prevSection = currentSection.previousElementSibling;
-        if (prevSection) prevSection.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    // Botón para activar/desactivar el scroll automático
-    scrollButton?.addEventListener("click", () => {
-      console.log("click")
-      autoScrollEnabled = !autoScrollEnabled;
-      if (autoScrollEnabled) {
-        scrollButton.textContent = "Desactivar Scroll Auto";
-        window.addEventListener("wheel", handleScroll, { passive: false });
-      } else {
-        scrollButton.textContent = "Activar Scroll Auto";
-        window.removeEventListener("wheel", handleScroll);
+  const callback = (entries: any) => {
+    entries.forEach((entry: any) => {
+      if (entry.isIntersecting) {
+        navItems.forEach((item) => {
+          if (item.getAttribute("aria-label") == entry.target.id) {
+            item.classList.add("text-blue-500");
+          } else {
+            item.classList.remove("text-blue-500");
+          }
+        });
       }
     });
+  };
+
+  const observer = new IntersectionObserver(callback, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  });
+
+  sections.forEach((section) => observer.observe(section));
+
+  document.onvisibilitychange = () => {
+    if (document.visibilityState === "hidden") {
+      observer.disconnect();
+    } else {
+      sections.forEach((section) => observer.observe(section));
+    }
+  };
+
+  // Función de scroll automático
+  const handleScroll = (event: any) => {
+    if (!autoScrollEnabled) return; // Si está apagado, no hacer nada
+    event.preventDefault(); // Evita el scroll normal
+
+    const currentSection = Array.from(sections).find((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.top >= 0 && rect.top < window.innerHeight;
+    });
+
+    if (!currentSection) return;
+
+    if (event.deltaY > 0) {
+      // Scroll hacia abajo -> Ir a la siguiente sección
+      const nextSection = currentSection.nextElementSibling;
+      if (nextSection) nextSection.scrollIntoView({ behavior: "smooth" });
+    } else if (event.deltaY < 0) {
+      // Scroll hacia arriba -> Ir a la sección anterior
+      const prevSection = currentSection.previousElementSibling;
+      if (prevSection) prevSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Botón para activar/desactivar el scroll automático
+  scrollButton?.addEventListener("click", () => {
+    console.log("click");
+    autoScrollEnabled = !autoScrollEnabled;
+    if (autoScrollEnabled) {
+      scrollButton.textContent = "Desactivar Scroll Auto";
+      window.addEventListener("wheel", handleScroll, { passive: false });
+    } else {
+      scrollButton.textContent = "Activar Scroll Auto";
+      window.removeEventListener("wheel", handleScroll);
+    }
+  });
 </script>
