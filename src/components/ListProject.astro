@@ -2,6 +2,9 @@
 import Angular from "../icons/Angular.astro";
 import Code from "../icons/Code.astro";
 import SpringBoot from "../icons/SpringBoot.astro";
+import React from "../icons/React.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Vite from "../icons/Vite.astro";
 
 const TAGS = {
   ANGULAR: {
@@ -14,26 +17,32 @@ const TAGS = {
     class: "bg-green-100/90 text-gray-900",
     icon: SpringBoot,
   },
+  REACT: {
+    name: "React",
+    class: "bg-sky-100/90 text-gray-900",
+    icon: React,
+  },
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: "bg-sky-200 text-gray-900",
+    icon: Tailwind,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-fuchsia-50/90 text-gray-900",
+    icon: Vite,
+  },
 };
 
 const PROJECTS = [
   {
-    title: "Projecto 1",
+    title: "Memory-Game",
     description:
-      "Descripcipon de un proyecto largo que se ha realizado en el pasado y que tambien me ha gustado hacerlo completo entero yo solo sin tutorial",
+      "Juego de cartas de memoria, trata de hayar todas las parejas en tiempo record. Capaz de cambiar la dificultad y de ver el ranking de los mejores tiempos, donde podras ver el nombre, tiempo y dificultad",
     link: "https://google.com",
     github: "#github",
-    image: "/projects/shots.png",
-    tags: [TAGS.ANGULAR, TAGS.SPRING],
-  },
-  {
-    title: "Projecto 1",
-    description:
-      "Descripcipon de un proyecto largo que se ha realizado en el pasado y que tambien me ha gustado hacerlo completo entero yo solo sin tutorial",
-    link: "https://google.com",
-    github: "#github",
-    image: "/projects/shots.png",
-    tags: [TAGS.ANGULAR, TAGS.SPRING],
+    image: "/projects/memory-game.png",
+    tags: [TAGS.REACT, TAGS.VITE, TAGS.TAILWIND],
   },
 ];
 ---
@@ -51,7 +60,7 @@ const PROJECTS = [
     PROJECTS.map((project) => (
     <article class="relative border-2 border-blue-900 rounded-2xl shadow-2xl shadow-amber-100/50 
                   dark:border-gray-950 dark:shadow-cyan-600 mb-10 px-10 md:pb-10 md:pt-16 xxs:pt-5 xxs:px-5 xxs:pb-5 overflow-hidden">
-      <a href={project.github} class="cursor-pointer block md:peer">
+      <a href={project.github} class="cursor-pointer block peer">
         <img
           class="md:absolute md:top-[-50px] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full md:max-w-[100%] 
           md:rounded-b-[170px] md:transition-all md:duration-500
