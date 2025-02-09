@@ -37,6 +37,7 @@ const navItems = [
           class="relative block px-2 py-2 transition xxs:text-xs xs:text-xs md:text-[15px]  dark:text-black hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={link.label}
           href={link.url}
+          target={link.label=="contacto" ? "_blank" : ""}
         >
           {link.title}
         </a>
