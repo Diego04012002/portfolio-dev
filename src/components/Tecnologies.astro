@@ -4,16 +4,18 @@ import React from "../icons/React.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import Java from "../icons/Java.astro";
 import Vite from "../icons/Vite.astro";
-import JavaScript from "../icons/JavaScript.astro";
-import Css from "../icons/Css.astro";
 import SpringBoot from "../icons/SpringBoot.astro";
 import Postgres from "../icons/Postgres.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
 ---
 
 <div class="flex justify-center items-center">
   <ul
-    class="grid grid-cols-2 xxs:grid-cols-6 xxs:gap-x-3 xxs:gap-y-4 xs:gap-x-4 xs:grid-cols-8 sm:grid-cols-8 md:grid-cols-8 lg:grid-cols-8 xl:grid-cols-7 xl:gap-x-6"
+    class="grid grid-cols-2 xxs:grid-cols-6 xxs:gap-x-3 xxs:gap-y-4 xs:gap-x-4 xs:grid-cols-8 sm:grid-cols-8 md:grid-cols-8 lg:grid-cols-8 xl:grid-cols-8 xl:gap-x-6"
   >
+    <li class="flex items-center justify-center">
+      <AstroIcon class="size-10" />
+    </li>
     <li class="flex items-center justify-center">
       <Vite class="size-10" />
     </li>
@@ -30,10 +32,10 @@ import Postgres from "../icons/Postgres.astro";
       <Java class="size-10" />
     </li>
     <li class="flex items-center justify-center">
-      <Postgres class="size-10" />
+      <SpringBoot class="size-10" />
     </li>
     <li class="flex items-center justify-center">
-      <SpringBoot class="size-10" />
+      <Postgres class="size-10" />
     </li>
   </ul>
 </div>
