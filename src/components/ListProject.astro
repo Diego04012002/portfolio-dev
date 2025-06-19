@@ -5,6 +5,7 @@ import SpringBoot from "../icons/SpringBoot.astro";
 import React from "../icons/React.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import Vite from "../icons/Vite.astro";
+import TypeScript from "../icons/TypeScript.astro";
 
 const TAGS = {
   ANGULAR: {
@@ -32,6 +33,11 @@ const TAGS = {
     class: "bg-fuchsia-50/90 text-gray-900",
     icon: Vite,
   },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-fuchsia-50/90 text-gray-900",
+    icon: TypeScript,
+  },
 };
 
 const PROJECTS = [
@@ -43,6 +49,15 @@ const PROJECTS = [
     github: "#github",
     image: "/projects/memory-game.png",
     tags: [TAGS.REACT, TAGS.VITE, TAGS.TAILWIND],
+  },
+  {
+    title: "PokeDex",
+    description:
+      "Es una herramienta visual y comparativa para fans de Pokémon que quieran explorar, analizar y comparar fácilmente la información de los Pokémon y sus movimientos.",
+    link: "https://pokeapi-d3.netlify.app",
+    github: "#github",
+    image: "/projects/pokeapi.png",
+    tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.TYPESCRIPT],
   },
 ];
 ---
@@ -70,8 +85,6 @@ const PROJECTS = [
           alt={`Captura de pantalla del proyecto ${project.title}`}
         />
       </a>
-
-      <!-- Div que se anima cuando se hace hover sobre el <a> -->
       <div class="md:transition-all md:duration-500 md:peer-hover:translate-y-60">
         <h3 class="text-2xl font-semibold text-fuchsia-700/95 mb-2 dark:text-gray-950 md:mt-30 xs:mt-10 xxs:mt-8">
           {project.title}
