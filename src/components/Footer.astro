@@ -1,6 +1,11 @@
 ---
 const navItems = [
   {
+    title: "Perfil",
+    label: "perfil",
+    url: "/#perfil",
+  },
+  {
     title: "Experiencia",
     label: "experiencia",
     url: "/#experiencia",
@@ -9,11 +14,6 @@ const navItems = [
     title: "Proyectos",
     label: "proyectos",
     url: "/#proyectos",
-  },
-  {
-    title: "Perfil",
-    label: "perfil",
-    url: "/#perfil",
   },
   {
     title: "Contacto",
@@ -34,10 +34,10 @@ const navItems = [
 </script>
 
 <footer
-  class="backdrop-blur-3xl rounded-lg xl:w-[1120px] m-4 xxs:w-[360px] md:w-[800px] md:mx-10"
+  class="backdrop-blur-3xl rounded-lg xl:w-[1120px] md:w-[800px] xxs:w-[360px] mx-auto flex justify-center"
 >
   <div
-    class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between md:flex-col md:gap-y-3 sm:items-center sm:gap-y-3 sm:flex sm:flex-col sm:justify-center xs:flex xs:flex-col xs:items-center xxs:items-center xxs:justify-center xxs:flex xxs:flex-col xxs:w-full lg:flex-row"
+    class="w-full max-w-screen-xl p-4 flex flex-row items-center justify-between gap-y-3"
   >
     <span class="text-sm text-blue-200 sm:text-center dark:text-sky-700"
       >© <span id="year"></span>
