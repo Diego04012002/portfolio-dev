@@ -3,6 +3,11 @@ import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
   {
+    title: "Perfil",
+    label: "perfil",
+    url: "/#perfil",
+  },
+  {
     title: "Experiencia",
     label: "experiencia",
     url: "/#experiencia",
@@ -11,11 +16,6 @@ const navItems = [
     title: "Proyectos",
     label: "proyectos",
     url: "/#proyectos",
-  },
-  {
-    title: "Perfil",
-    label: "perfil",
-    url: "/#perfil",
   },
   {
     title: "Certificados",
@@ -143,7 +143,6 @@ const navItems = [
 
   // Botón para activar/desactivar el scroll automático
   scrollButton?.addEventListener("click", () => {
-    console.log("click");
     autoScrollEnabled = !autoScrollEnabled;
     if (autoScrollEnabled) {
       scrollButton.textContent = "Desactivar Scroll Auto";

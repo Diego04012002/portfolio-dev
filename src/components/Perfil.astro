@@ -1,5 +1,15 @@
 ---
 import Avatar from "../icons/Avatar.astro";
+import PointHardIcon from "../icons/PointHardIcon.astro";
+
+const STRENGTHS = [
+  "Desarrollo Full Stack",
+  "Soluciones Innovadoras",
+  "Mentalidad Analítica y Creativa",
+  "APIs Robustas",
+  "Interfaces Intuitivas",
+  "Software de Alto Rendimiento",
+];
 ---
 
 <section
@@ -7,32 +17,63 @@ import Avatar from "../icons/Avatar.astro";
   class="w-full lg:w-[740px] flex flex-col"
 >
   <h2
-    class="text-3xl font-semibold mb-5 text-white flex items-center gap-x-5 md:mt-4 xs:mt-20 xxs:mt-60 dark:text-gray-900"
+    class="text-3xl font-semibold mb-5 text-white flex items-center gap-x-5 md:mt-20 xs:mt-20 xxs:mt-60 dark:text-gray-900"
   >
     <Avatar class="size-8" />Perfil
   </h2>
-  <div>
-    <p class="xxs:text-[16px] md:text-xl text-pretty mb-3">
-      <span class="text-violet-700">Soy un desarrollador Full Stack con más de 3 años de experiencia</span>
-       <span class="dark:text-black text-white">creando
-      soluciones innovadoras y eficientes para proyectos web y aplicaciones
-      empresariales. Mi enfoque combina un sólido dominio de tecnologías
-      Frontend y Backend con una mentalidad</span> <span class="text-violet-500">analítica y creativa</span> 
-      <span class="dark:text-black text-white">para resolver problemas complejos. Desde Tenerife, España 🇪🇸, he trabajado en el
-      desarrollo y mantenimiento de plataformas de gestión, optimización de
-      procesos y automatización de sistemas, siempre con el objetivo de ofrecer
-      productos</span> 
-      <span class="text-fuchsia-700">funcionales, escalables y de alto rendimiento.</span>
-    </p>
-    <p class="xxs:text-[16px] md:text-xl text-pretty">
-      <span class="dark:text-black text-white">Me especializo en construir </span>
-      <span class="text-violet-700">interfaces intuitivas, desarrollar APIs
-      robustas y diseñar soluciones a medida</span> <span class="dark:text-black text-white">que se adaptan a las necesidades
-      del cliente. Disfruto enfrentando retos técnicos y buscando enfoques
-      originales para mejorar la experiencia del usuario y la eficiencia del
-      software. Si estás buscando a alguien que transforme ideas en productos</span>
-      <span class="text-fuchsia-700">digitales efectivos</span><span class="dark:text-black text-white">, estaré encantado de colaborar en tu próximo proyecto.
-      🚀</span>
-    </p>
+  <div
+    class="relative p-1 rounded-2xl bg-gradient-to-br from-violet-500 via-fuchsia-500 to-blue-500 shadow-lg"
+  >
+    <div class="bg-gray-900/95 dark:bg-gray-100 rounded-xl p-6 md:p-8">
+      <p
+        class="xxs:text-[16px] md:text-xl text-pretty mb-4 text-gray-300 dark:text-gray-700"
+      >
+        <span class="text-violet-400 font-semibold"
+          >Soy un desarrollador Full Stack con más de 3 años de experiencia</span
+        >
+        creando soluciones innovadoras y eficientes para proyectos web y
+        aplicaciones empresariales. Mi enfoque combina un sólido dominio de
+        tecnologías Frontend y Backend con una mentalidad <span
+          class="text-violet-400 font-semibold">analítica y creativa</span
+        >
+        para resolver problemas complejos. Desde Tenerife, España 🇪🇸, he
+        trabajado en el desarrollo y mantenimiento de plataformas de gestión,
+        optimización de procesos y automatización de sistemas, siempre con el
+        objetivo de ofrecer productos
+        <span class="text-fuchsia-400 font-semibold"
+          >funcionales, escalables y de alto rendimiento.</span
+        >
+      </p>
+      <p class="xxs:text-[16px] md:text-xl text-pretty text-gray-300 dark:text-gray-700">
+        Me especializo en construir
+        <span class="text-violet-400 font-semibold"
+          >interfaces intuitivas, desarrollar APIs robustas y diseñar soluciones
+          a medida</span
+        > que se adaptan a las necesidades del cliente. Disfruto enfrentando
+        retos técnicos y buscando enfoques originales para mejorar la
+        experiencia del usuario y la eficiencia del software. Si estás buscando a
+        alguien que transforme ideas en productos <span
+          class="text-fuchsia-400 font-semibold">digitales efectivos</span
+        >, estaré encantado de colaborar en tu próximo proyecto. 🚀
+      </p>
+
+      <div class="border-t border-white/10 dark:border-black/10 pt-6 mt-8">
+        <h3
+          class="text-lg font-semibold text-white dark:text-gray-900 mb-4 flex items-center gap-x-3"
+        >
+        <PointHardIcon class="size-6" />
+          Puntos Fuertes
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {
+            STRENGTHS.map((strength) => (
+              <span class="bg-violet-500/10 text-violet-300 dark:bg-violet-500/20 dark:text-violet-700 text-sm font-medium px-3 py-1 rounded-full">
+                {strength}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
   </div>
 </section>

@@ -47,7 +47,7 @@ const PROJECTS = [
       "Juego de cartas de memoria, trata de hallar todas las parejas en tiempo record. Capaz de cambiar la dificultad y de ver el ranking de los mejores tiempos, donde podras ver el nombre, tiempo y dificultad",
     link: "https://cardory.netlify.app",
     github: "#github",
-    image: "/projects/memory-game.png",
+    image: "memory-game.png",
     tags: [TAGS.REACT, TAGS.VITE, TAGS.TAILWIND],
   },
   {
@@ -56,7 +56,7 @@ const PROJECTS = [
       "Es una herramienta visual y comparativa para fans de Pokémon que quieran explorar, analizar y comparar fácilmente la información de los Pokémon y sus movimientos.",
     link: "https://pokeapi-d3.netlify.app",
     github: "#github",
-    image: "/projects/pokeapi.png",
+    image: "pokeapi.png",
     tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.TYPESCRIPT],
   },
 ];
@@ -77,11 +77,11 @@ const PROJECTS = [
                   dark:border-gray-950 dark:shadow-cyan-600 mb-10 px-10 md:pb-10 md:pt-16 xxs:pt-5 xxs:px-5 xxs:pb-5 overflow-hidden">
       <a href={project.link} class="cursor-pointer block peer" target="_blank">
         <img
-          class="md:absolute md:top-[-50px] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full md:max-w-[100%] 
+          class="md:absolute h-full md:top-[-50px] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full md:max-w-[100%] 
           md:rounded-b-[170px] md:transition-all md:duration-500
-          md:hover:translate-y-14 md:hover:px-2 md:hover:py-2 md:hover:rounded-2xl 
+          md:hover:translate-y-12 md:hover:px-2 md:hover:py-2 md:hover:rounded-2xl 
           dark:shadow-gray-950/80"
-          src={project.image}
+          src={`/img/projects/${project.image}`}
           alt={`Captura de pantalla del proyecto ${project.title}`}
         />
       </a>
