@@ -6,6 +6,7 @@ import React from "../icons/React.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import Vite from "../icons/Vite.astro";
 import TypeScript from "../icons/TypeScript.astro";
+import NextJS from "../icons/NextJS.astro";
 
 const TAGS = {
   ANGULAR: {
@@ -38,6 +39,11 @@ const TAGS = {
     class: "bg-fuchsia-50/90 text-gray-900",
     icon: TypeScript,
   },
+  NEXTJS: {
+    name: "NextJS",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
 };
 
 const PROJECTS = [
@@ -58,6 +64,15 @@ const PROJECTS = [
     github: "#github",
     image: "pokeapi.png",
     tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.TYPESCRIPT],
+  },
+  {
+    title: "GameCur-IA",
+    description:
+      "GameCurious es una web minimalista que te sorprende diariamente con datos fascinantes del mundo de los videojuegos. Cada curiosidad es generada por inteligencia artificial y abarca desde historia gaming hasta secretos de desarrollo, personajes icónicos y tecnología revolucionaria.",
+    link: "https://gamecur-ia.netlify.app",
+    github: "#github",
+    image: "gamecur-ia.png",
+    tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.TAILWIND, TAGS.TYPESCRIPT],
   },
 ];
 ---
@@ -80,7 +95,7 @@ const PROJECTS = [
           class="md:absolute h-full md:top-[-50px] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full md:max-w-[100%] 
           md:rounded-b-[170px] md:transition-all md:duration-500
           md:hover:translate-y-12 md:hover:px-2 md:hover:py-2 md:hover:rounded-2xl 
-          dark:shadow-gray-950/80"
+          dark:shadow-gray-950/80 object-cover"
           src={`/img/projects/${project.image}`}
           alt={`Captura de pantalla del proyecto ${project.title}`}
         />
