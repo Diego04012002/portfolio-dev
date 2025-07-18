@@ -7,6 +7,8 @@
   --breakpoint-xxs: 20rem;
   --animate-carousel-infinite: infinite 25s linear infinite;
   --animate-custom-move: infinite custom-move 5s ease-out ;
+  --text-xxs: 0.60rem; 
+
 
   @keyframes infinite {
     from {
