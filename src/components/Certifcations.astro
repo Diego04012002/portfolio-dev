@@ -35,14 +35,14 @@ const certificados = [
 
 <section id="certificados" class="w-full lg:w-[740px] flex flex-col justify-center gap-4 mb-20 mt-30">
     <h2
-      class="text-3xl font-semibold mb-5 text-white flex items-center gap-x-5 md:mt-16 xs:mt-10 xxs:mt-10 dark:text-gray-900"
+      class="text-3xl font-semibold md:mb-5 text-white flex items-center gap-x-5 md:mt-16 xs:mt-10 xxs:mt-10 dark:text-gray-900"
     ><CertificationIcon class="size-8" />
     Certificados</h2>
-    <div class=" grid gap-8 md:gap-8">
+    <div class=" grid gap-8 md:gap-8 ">
       {certificados.map((cert, index) => (
         <div class={`group relative ${
           index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-        } flex flex-col md:flex mt-10 gap-8 items-center justify-center`}>
+        } flex flex-col md:flex first:mt-0 not-first:mt-10 gap-8 items-center justify-center`}>
           
           <div class="relative w-full md:w-1/2">
             <div class={`relative overflow-hidden rounded-3xl p-1 ${
