@@ -1,0 +1,21 @@
+.App {
+  min-height: 100vh;
+}
+
+.App-link {
+  color: #34d399;
+}
+
+/* Floating cursor accent (decorative) */
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgb(52 211 153);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 100ms ease;
+}
