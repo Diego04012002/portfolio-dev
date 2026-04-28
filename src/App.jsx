@@ -46,7 +46,7 @@ const Portfolio = () => {
         <Skills />
         <Experience />
         <Certifications />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
       <BackToTop />

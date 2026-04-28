@@ -79,7 +79,7 @@ const Hero = () => {
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             {personal.tagline} Especializado en{" "}
-            <span className="text-foreground font-medium">React, Angular y Spring Boot</span>{" "}
+            <span className="text-foreground font-medium">Angular y Spring Boot</span>{" "}
             — transformo ideas en productos digitales escalables y eficientes.
           </p>
 
@@ -99,7 +99,14 @@ const Hero = () => {
               Contáctame
             </Button>
             <Button
-              onClick={() => window.print()}
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/cv/Diego_Alejandro_García_Deus_CV_.pdf";
+                link.download = "Diego_Alejandro_García_Deus_CV.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
               variant="ghost"
               className="h-11 px-5 text-muted-foreground hover:text-foreground hover:bg-secondary"
             >

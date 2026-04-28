@@ -103,7 +103,7 @@ const Contact = () => {
                 </span>
                 <div>
                   <div className="text-xs text-muted-foreground">LinkedIn</div>
-                  <div className="text-sm font-medium text-foreground">/in/diego-dev</div>
+                  <div className="text-sm font-medium text-foreground">Diego</div>
                 </div>
               </a>
               <a
@@ -117,7 +117,7 @@ const Contact = () => {
                 </span>
                 <div>
                   <div className="text-xs text-muted-foreground">GitHub</div>
-                  <div className="text-sm font-medium text-foreground">@diego-dev</div>
+                  <div className="text-sm font-medium text-foreground">@Diego04012002</div>
                 </div>
               </a>
               <div className="flex items-center gap-3 p-3 rounded-lg border border-border">

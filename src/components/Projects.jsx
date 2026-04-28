@@ -15,7 +15,7 @@ const ProjectCard = ({ p }) => {
     <article className="group relative rounded-2xl border border-border bg-card overflow-hidden hover:border-emerald-500/40 transition-colors duration-300">
       <div className="relative aspect-[16/10] overflow-hidden">
         <img
-          src={p.image}
+          src={`/img/projects/${p.image}`}
           alt={p.title}
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

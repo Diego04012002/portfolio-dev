@@ -38,7 +38,14 @@ const CommandPalette = () => {
         id: "cv",
         label: "Descargar CV (PDF)",
         icon: FileText,
-        action: () => window.print(),
+        action: () => {
+          const link = document.createElement("a");
+          link.href = "/cv/Diego_Alejandro_García_Deus_CV_.pdf";
+          link.download = "Diego_Alejandro_García_Deus_CV.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        },
       },
       {
         type: "link",

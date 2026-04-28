@@ -72,7 +72,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="md:col-span-4">
+          {/* <div className="md:col-span-4">
             <h4 className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-4">
               ¿Trabajamos juntos?
             </h4>
@@ -85,7 +85,7 @@ const Footer = () => {
             >
               Empezar conversación <ArrowUpRight size={14} />
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">

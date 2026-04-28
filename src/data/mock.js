@@ -3,17 +3,17 @@
 
 export const personal = {
   name: "Diego",
-  fullName: "Diego Hernández",
-  role: "Full Stack Developer",
+  fullName: "Diego Alejandro García Deus",
+  role: "Desarrollador Full Stack",
   location: "Vigo, España",
-  email: "diego.dev@portfolio.es",
+  email: "dgarciadeus@gmail.com",
   tagline: "Construyo productos digitales rápidos, escalables y con propósito.",
   bio: "Desarrollador Full Stack con más de 2 años de experiencia creando soluciones innovadoras y eficientes para proyectos web y aplicaciones empresariales. Combino un sólido dominio de tecnologías Frontend y Backend con una mentalidad analítica y creativa para resolver problemas complejos.",
   bioExtended: "Desde Vigo, España, he trabajado en plataformas de gestión, optimización de procesos y automatización de sistemas. Me especializo en construir interfaces intuitivas, APIs robustas y soluciones a medida que se adaptan a las necesidades del cliente.",
   social: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    email: "mailto:diego.dev@portfolio.es",
+    github: "https://github.com/Diego04012002",
+    linkedin: "https://www.linkedin.com/in/diego-alejandro-garcía-deus/",
+    email: "mailto:dgarciadeus@gmail.com",
   },
   available: true,
 };
@@ -29,36 +29,31 @@ export const strengths = [
 
 export const stats = [
   { value: 2, suffix: "+", label: "Años de experiencia" },
-  { value: 15, suffix: "+", label: "Proyectos completados" },
-  { value: 10, suffix: "+", label: "Tecnologías dominadas" },
+  { value: 5, suffix: "", label: "Proyectos completados" },
+  { value: 5, suffix: "+", label: "Tecnologías dominadas" },
   { value: 100, suffix: "%", label: "Compromiso con calidad" },
 ];
 
 export const skills = {
   Frontend: [
-    { name: "React", level: 90 },
     { name: "Next.js", level: 80 },
     { name: "Angular", level: 85 },
     { name: "TypeScript", level: 85 },
     { name: "TailwindCSS", level: 92 },
     { name: "Astro", level: 75 },
+    { name: "React", level: 30 },
   ],
   Backend: [
     { name: "Java", level: 88 },
     { name: "Spring Boot", level: 85 },
-    { name: "Node.js", level: 78 },
-    { name: "REST APIs", level: 90 },
   ],
   "Bases de datos": [
     { name: "PostgreSQL", level: 82 },
-    { name: "MongoDB", level: 75 },
     { name: "MySQL", level: 80 },
   ],
   Herramientas: [
     { name: "Git / GitHub", level: 90 },
     { name: "Vite", level: 85 },
-    { name: "Docker", level: 70 },
-    { name: "Figma", level: 75 },
   ],
 };
 
@@ -71,9 +66,9 @@ export const projects = [
     tech: ["React", "Vite", "TailwindCSS"],
     category: "Frontend",
     demo: "https://cardory.netlify.app",
-    github: "https://github.com",
+    github: "https://github.com/Diego04012002/memory-game",
     image:
-      "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=800&h=500&fit=crop",
+      "memory-game.png",
     featured: true,
   },
   {
@@ -84,9 +79,9 @@ export const projects = [
     tech: ["Angular", "TypeScript", "TailwindCSS"],
     category: "Frontend",
     demo: "https://pokeapi-d3.netlify.app",
-    github: "https://github.com",
+    github: "https://github.com/Diego04012002/pokeapi",
     image:
-      "https://images.unsplash.com/photo-1542779283-3f3a4c91d8c1?w=800&h=500&fit=crop",
+      "pokeapi.png",
     featured: true,
   },
   {
@@ -97,42 +92,27 @@ export const projects = [
     tech: ["Next.js", "React", "TypeScript", "TailwindCSS"],
     category: "Full Stack",
     demo: "https://gamecur-ia.netlify.app",
-    github: "https://github.com",
+    github: "https://github.com/Diego04012002/gamecur-ia",
     image:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=500&fit=crop",
+      "gamecur-ia.png",
     featured: true,
-  },
-  {
-    id: 4,
-    title: "Plataforma Gestión",
-    description:
-      "Sistema interno de gestión de proyectos para empresa con módulos de tareas, reportes y panel de control en tiempo real.",
-    tech: ["Angular", "Spring Boot", "PostgreSQL"],
-    category: "Full Stack",
-    demo: "#",
-    github: "https://github.com",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Vending Control",
-    description:
-      "Programa para automatización y control de máquinas de vending mediante código único, con monitoreo y alertas.",
-    tech: ["React", "Node.js", "MongoDB"],
-    category: "Full Stack",
-    demo: "#",
-    github: "https://github.com",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop",
-    featured: false,
   },
 ];
 
 export const projectFilters = ["Todos", "Frontend", "Full Stack", "Backend"];
 
 export const experiences = [
+  {
+    id: 1,
+    role: "Frontend Developer",
+    company: "Experienceis IT / Dedalus",
+    period: "2025 — Actualidad",
+    type: "Empleo",
+    description:
+      "Desarrollo y mantenimiento de el software hospitalario utilizado en varias comunidades autónomas de España",
+    link: "https://www.dedalus.com/spain/es/",
+    stack: ["JavaScript", "HTML", "CSS", "Java", "Oracle"],
+  },
   {
     id: 1,
     role: "Full Stack Developer",
@@ -170,6 +150,15 @@ export const experiences = [
 
 export const certifications = [
   {
+    id: 4,
+    title: "Angular: De cero a experto",
+    institution: "Udemy",
+    year: "2025",
+    description:
+      "Signals, componentes, servicios, zoneless, mapas, autenticación, despliegues, carga de archivos, Git, GitHub y mucho más",
+    tech: ["Angular", "TypeScript", "HTML", "CSS"],
+  },
+  {
     id: 1,
     title: "Desarrollo de aplicaciones web con IA",
     institution: "Udemy",
@@ -205,5 +194,5 @@ export const navLinks = [
   { id: "skills", label: "Skills" },
   { id: "experiencia", label: "Experiencia" },
   { id: "certificados", label: "Certificados" },
-  { id: "contacto", label: "Contacto" },
+  // { id: "contacto", label: "Contacto" },
 ];
