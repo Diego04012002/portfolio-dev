@@ -1,3 +1,3 @@
 # Portofolio Diego
 
-![image](https://github.com/user-attachments/assets/a20804a8-6e10-4b84-9465-7c707e080ddc)
+<img width="2522" height="1219" alt="porfolio" src="https://github.com/user-attachments/assets/3a9b1438-87ab-40d9-8488-e556752932c5" />
