@@ -95,12 +95,12 @@ const Navbar = () => {
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
-          <Button
+          {/* <Button
             onClick={() => handleClick("contacto")}
             className="hidden sm:inline-flex h-9 bg-emerald-500 hover:bg-emerald-600 text-white border-0"
           >
             Contactar
-          </Button>
+          </Button> */}
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden h-9 w-9 inline-flex items-center justify-center rounded-md border border-border bg-secondary/40 text-foreground focus-ring"
