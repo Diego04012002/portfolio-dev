@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { Search, ArrowRight, Github, Linkedin, Mail, Moon, Sun, FileText, Command } from "lucide-react";
-import { navLinks, personal } from "../data/mock";
+import { navLinks, personal } from "../data/data";
 import { useTheme } from "../context/ThemeContext";
 
 const CommandPalette = () => {

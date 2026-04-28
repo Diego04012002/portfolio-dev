@@ -1,6 +1,6 @@
 import React from "react";
 import { useReveal } from "../hooks/useReveal";
-import { strengths, personal } from "../data/mock";
+import { strengths, personal } from "../data/data";
 import { CheckCircle2, Briefcase, Globe2, Zap } from "lucide-react";
 
 const Pillar = ({ icon: Icon, title, text }) => (

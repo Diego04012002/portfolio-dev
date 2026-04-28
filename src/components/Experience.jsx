@@ -1,6 +1,6 @@
 import React from "react";
 import { ExternalLink, Briefcase, GraduationCap } from "lucide-react";
-import { experiences } from "../data/mock";
+import { experiences } from "../data/data";
 import { useReveal } from "../hooks/useReveal";
 
 const ExperienceItem = ({ e, last }) => {

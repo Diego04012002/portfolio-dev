@@ -6,7 +6,7 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { toast } from "sonner";
 import { useReveal } from "../hooks/useReveal";
-import { personal } from "../data/mock";
+import { personal } from "../data/data";
 
 const Contact = () => {
   const headRef = useReveal();
@@ -40,7 +40,7 @@ const Contact = () => {
       return;
     }
     setSending(true);
-    // Simulated submission (mock). Saved locally so user sees state.
+    // Simulated submission (data). Saved locally so user sees state.
     await new Promise((r) => setTimeout(r, 900));
     try {
       const stored = JSON.parse(localStorage.getItem("diego_messages") || "[]");

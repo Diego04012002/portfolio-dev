@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { ExternalLink, Github, Star } from "lucide-react";
 import { useReveal } from "../hooks/useReveal";
-import { projects, projectFilters } from "../data/mock";
+import { projects, projectFilters } from "../data/data";
 import { Button } from "./ui/button";
 
 const TechBadge = ({ name }) => (

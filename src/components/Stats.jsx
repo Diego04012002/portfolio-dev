@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { stats } from "../data/mock";
+import { stats } from "../data/data";
 
 const Counter = ({ value, suffix }) => {
   const [n, setN] = useState(0);

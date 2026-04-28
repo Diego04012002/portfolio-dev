@@ -1,6 +1,6 @@
 import React from "react";
 import { Github, Linkedin, Mail, ArrowUpRight, Heart } from "lucide-react";
-import { personal, navLinks } from "../data/mock";
+import { personal, navLinks } from "../data/data";
 
 const Footer = () => {
   const year = new Date().getFullYear();

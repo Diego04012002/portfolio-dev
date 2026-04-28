@@ -1,4 +1,4 @@
-// Mock data for Diego's developer portfolio
+// data data for Diego's developer portfolio
 // All content is centralized here for easy editing
 
 export const personal = {
@@ -95,6 +95,19 @@ export const projects = [
     github: "https://github.com/Diego04012002/gamecur-ia",
     image:
       "gamecur-ia.png",
+    featured: true,
+  },
+  {
+    id: 4,
+    title: "Portfolio R4mos",
+    description:
+      "Portfolio del reconocido cantante canario R4mos: Descubre su música, videos y próximos conciertos.",
+    tech: ["React", "JavaScript", "CSS"],
+    category: "Frontend",
+    demo: "https://r4mos.netlify.app",
+    github: "https://github.com/Diego04012002/ramos-portfolio",
+    image:
+      "ramos-portfolio.png",
     featured: true,
   },
 ];

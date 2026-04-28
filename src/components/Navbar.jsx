@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X, Moon, Sun, Sparkles, Command } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import { navLinks, personal } from "../data/mock";
+import { navLinks, personal } from "../data/data";
 import { Button } from "./ui/button";
 
 const Navbar = () => {

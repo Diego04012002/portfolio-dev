@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { ArrowRight, Github, Linkedin, Mail, MapPin, Code2, Download } from "lucide-react";
 import { Button } from "./ui/button";
-import { personal } from "../data/mock";
+import { personal } from "../data/data";
 
 const Hero = () => {
   const codeRef = useRef(null);

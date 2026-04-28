@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { skills } from "../data/mock";
+import { skills } from "../data/data";
 import { useReveal } from "../hooks/useReveal";
 import { Layers, Server, Database, Wrench } from "lucide-react";
 

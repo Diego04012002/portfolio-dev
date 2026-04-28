@@ -1,6 +1,6 @@
 import React from "react";
 import { Award, Calendar } from "lucide-react";
-import { certifications } from "../data/mock";
+import { certifications } from "../data/data";
 import { useReveal } from "../hooks/useReveal";
 
 const CertCard = ({ c }) => {
